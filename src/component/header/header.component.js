@@ -15,7 +15,7 @@ const Header = ({ bullet }) => (
     </Link>
     <ul className="header__menu">
       <li className="header__menu-item">
-        <Link to="">Search</Link>
+        <Link to="/search">Search</Link>
       </li>
       <li className="header__menu-item header__menu-item--bullet">
         <span>{bullet}</span>
