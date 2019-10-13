@@ -1,0 +1,22 @@
+@import "../../../assets/variables/variables";
+
+.shop {
+  display: none;
+
+  &--opened {
+    display: block;
+    position: absolute;
+    top: $header-height;
+    right: 0;
+    width: 350px;
+    height: 300px;
+    background-color: #AB333B;
+    border: 10px solid #AB333B;
+
+    overflow: auto;
+  }
+}
+
+.shop__button {
+  background: none;
+}

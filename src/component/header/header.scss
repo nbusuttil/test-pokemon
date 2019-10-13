@@ -64,6 +64,15 @@
     height: 40px;
   }
 
+  &--bullet > span {
+      position: absolute;
+      right: 32px;
+      top: 20px;
+
+      font-size: 12px;
+      color: $theme-color-1;
+  }
+
   &:hover, &:focus {
     background-color: $theme-color-2;
   }

@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShopInfo component render with item 1`] = `
+<div
+  className="shopInfo"
+>
+  <div
+    className="shopInfo__container"
+  >
+    <div
+      className="shopInfo__container-card"
+      key="17"
+    >
+      <Card
+        action={[MockFunction]}
+        addQuantity={[MockFunction]}
+        isShop={true}
+        modifier={true}
+        openModal={[MockFunction]}
+        pokemon={
+          Object {
+            "id": 17,
+            "name": "pidgeotto",
+            "price": 6,
+            "quantity": 1,
+            "url": "https://pokeapi.co/api/v2/pokemon/17/",
+          }
+        }
+        removeQuantity={[MockFunction]}
+        titleAction="Remove"
+        titleAdd="+"
+        titleRemove="-"
+      />
+    </div>
+    <div
+      className="shopInfo__container-actions"
+    >
+      <p>
+        Cart Subtotal: 
+        7
+        €
+      </p>
+      <button>
+        Buy
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ShopInfo component render without crashing 1`] = `
+<div
+  className="shopInfo"
+>
+  <p
+    className="shopInfo__empty"
+  >
+    Your Shopping Cart is empty.
+  </p>
+</div>
+`;
