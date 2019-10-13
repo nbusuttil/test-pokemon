@@ -1,0 +1,130 @@
+@import "../../assets/variables/variables";
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+
+  width: 23.4vw;
+  height: auto;
+
+  border: 1px solid $theme-color-3;
+  text-decoration: none;
+  color: black;
+  transition: $transition;
+
+  .card__picture {
+    cursor: pointer;
+    background: none;
+    border: none;
+
+    img {
+      width: 100px;
+      height: auto;
+    }
+  }
+
+  .card__title {
+    font-size: 16px;
+    margin: auto 0 10px;
+    text-transform: capitalize;
+    color: $theme-color-3;
+    transition: $transition;
+
+    span {
+      color: #333;
+    }
+  }
+
+  &:hover:not(.card--full), &:focus:not(.card--full) {
+    background-color: $theme-color-3;
+
+    .card__title {
+      color: $theme-color-4;
+    }
+
+    .card__info-price {
+      span {
+        color: $theme-color-4;
+      }
+    }
+  }
+
+  .card__info {
+    display: flex;
+    width: 100%;
+
+    .card__info-quantity,
+    .card__info-price {
+      font-weight: 100;
+      transition: $transition;
+
+      span {
+        color: $theme-color-3;
+        font-weight: 500;
+      }
+    }
+
+    .card__info-quantity {
+      margin-left: 10px;
+    }
+
+    .card__info-price {
+      margin-left: auto;
+      margin-right: 10px;
+    }
+  }
+
+  .card__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    .card__actions-item {
+      margin: 0 10px;
+
+      button {
+        padding: 5px 10px;
+        color: $theme-color-4;
+        background-color: $theme-color-1;
+
+        &:disabled {
+          background-color: $theme-color-3;
+
+        }
+
+        &:hover:not(:disabled), &:focus:not(:disabled) {
+          background-color: $theme-color-2;
+        }
+      }
+
+      input {
+        border: none;
+        font-size: 12px;
+      }
+    }
+
+    a > img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &--full {
+    width: 90%;
+    background-color: $theme-color-4;
+    margin: 10px auto;
+
+    .card__actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      width: 100%;
+    }
+  }
+}

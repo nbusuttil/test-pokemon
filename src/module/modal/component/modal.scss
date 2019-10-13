@@ -1,0 +1,149 @@
+@import "../../../assets/variables/variables";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 50;
+}
+
+.modal__container {
+  width: 400px;
+  height: 500px;
+  background-color: $theme-color-4;
+}
+
+.modal__container-header {
+  display: flex;
+  padding: 10px;
+
+  background: $theme-color-1;
+
+  button {
+    margin-left: auto;
+
+    color:$theme-color-4;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.modal__container-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px;
+
+  h1 {
+    color: $theme-color-3;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+
+    span {
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      color: black;
+      text-align: center;
+    }
+  }
+}
+
+.modal__container-content-label {
+  display: flex;
+  width: 100px;
+  height: 20px;
+
+  > p {
+    color: $theme-color-4;
+    margin: auto;
+  }
+
+  &--dark {
+    background-color: #000000;
+  }
+
+  &--poison {
+    background-color: #A703B2;
+  }
+
+  &--dragon {
+    background-color: #9D7BE8;
+  }
+
+  &--flying {
+    background-color: #D87BE8;
+  }
+
+  &--ghost {
+    background-color: #8C87FF;
+  }
+
+  &--grass {
+    background-color: #0CB28E;
+  }
+
+  &--bug {
+    background-color: #499167;
+  }
+
+  &--fire {
+    background-color: #F7A625;
+  }
+
+  &--electric {
+    background-color: #F2C335;
+  }
+
+  &--ground {
+    background-color: #F2D479;
+  }
+
+  &--rock {
+    background-color: #DCAE24;
+  }
+
+  &--bug {
+    background-color: #A7BF50;
+  }
+
+  &--ice {
+    background-color: #66CCE9;
+  }
+
+  &--water {
+    background-color: #7EAED9;
+  }
+
+  &--steel {
+    background-color: #BFBFBF;
+  }
+
+  &--fairy {
+    background-color: #FF0DAC;
+  }
+
+  &--psychic {
+    background-color: #FF80B6;
+  }
+
+  &--fighting {
+    background-color: #E74C3C;
+  }
+
+  &--brown {
+    background-color: #A67153;
+  }
+}

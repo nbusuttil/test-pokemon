@@ -1,0 +1,70 @@
+@import  '../../assets/variables/variables';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  background-color: $theme-color-1;
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+  color: $theme-color-4;
+  text-decoration: none;
+  transition: $transition;
+
+  .header__link-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__link-title {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+
+  &:hover, &:focus {
+    background-color: $theme-color-2;
+  }
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  height: 70px;
+
+  margin-left: auto;
+  list-style: none;
+}
+
+.header__menu-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 10px;
+  transition: $transition;
+
+  a {
+    text-decoration: none;
+    color: $theme-color-4;
+  }
+
+   img {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover, &:focus {
+    background-color: $theme-color-2;
+  }
+}

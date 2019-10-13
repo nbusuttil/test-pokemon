@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component render without crashing 1`] = `
+<div
+  className="card"
+>
+  <button
+    className="card__picture"
+    onClick={[Function]}
+  >
+    <img
+      alt="spearow"
+      src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+    />
+  </button>
+  <h1
+    className="card__title"
+  >
+    <span>
+      #
+      2
+    </span>
+     
+    spearow
+  </h1>
+  <div
+    className="card__actions"
+  >
+    <div
+      className="card__actions-item"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Add to cart
+      </button>
+    </div>
+  </div>
+  <div
+    className="card__info"
+  >
+    <p
+      className="card__info-price"
+    >
+      <span>
+        Prix:
+      </span>
+       
+      7
+       €
+    </p>
+  </div>
+</div>
+`;

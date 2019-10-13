@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component render without crashing 1`] = `
+<div
+  className="home"
+>
+  <div
+    className="home__filter"
+  >
+    <p
+      className="home__filter-label"
+    >
+      Choose order
+    </p>
+    <select
+      className="home__filter-select"
+      onChange={[Function]}
+      value=""
+    />
+  </div>
+  <Card
+    action={[MockFunction]}
+    key="2"
+    openModal={[MockFunction]}
+    pokemon={
+      Object {
+        "id": 2,
+        "name": "spearow",
+        "price": 7,
+        "quantity": 0,
+        "url": "https://pokeapi.co/api/v2/pokemon/21/",
+      }
+    }
+    titleAction="Add to cart"
+  />
+  <Card
+    action={[MockFunction]}
+    key="1"
+    openModal={[MockFunction]}
+    pokemon={
+      Object {
+        "id": 1,
+        "name": "fearow",
+        "price": 4,
+        "quantity": 0,
+        "url": "https://pokeapi.co/api/v2/pokemon/22/",
+      }
+    }
+    titleAction="Add to cart"
+  />
+  <div
+    className="home__action"
+  >
+    <button
+      onClick={[Function]}
+    >
+      <img
+        alt="more"
+        src="more.svg"
+      />
+    </button>
+  </div>
+</div>
+`;
