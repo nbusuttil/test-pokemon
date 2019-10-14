@@ -7,7 +7,7 @@ import {
 import { getRandomPrice } from '../home/pokemon.utils';
 
 const initialState = {
-  result: [],
+  result: {},
   message: ''
 };
 

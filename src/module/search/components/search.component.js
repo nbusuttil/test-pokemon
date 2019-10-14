@@ -4,8 +4,17 @@ import PropTypes from 'prop-types';
 import Card from '../../../component/card/card.component';
 import SearchIcon from '../../../assets/icon/search.svg';
 import './search.scss';
+import Modal from '../../modal/component/modal.connector';
 
-const Search = ({ searchPokemon, resetSearch, addItem, result, message }) => {
+const Search = ({
+  searchPokemon,
+  resetSearch,
+  addItem,
+  result,
+  message,
+  openModal,
+  modal
+}) => {
   const [name, getName] = useState('');
 
   const handleNameChange = event => {
@@ -19,6 +28,7 @@ const Search = ({ searchPokemon, resetSearch, addItem, result, message }) => {
   const renderResult = result => (
     <Card
       pokemon={result}
+      openModal={openModal}
       key={result.id}
       action={addItem}
       titleAction="Add to cart"
@@ -53,6 +63,7 @@ const Search = ({ searchPokemon, resetSearch, addItem, result, message }) => {
           <p className="search__result-error">{message}</p>
         )}
       </div>
+      {modal ? <Modal /> : null}
     </div>
   );
 };
@@ -61,8 +72,10 @@ Search.propTypes = {
   searchPokemon: PropTypes.func.isRequired,
   resetSearch: PropTypes.func.isRequired,
   addItem: PropTypes.func.isRequired,
+  openModal: PropTypes.func.isRequired,
   pokemon: PropTypes.object,
-  message: PropTypes.string
+  message: PropTypes.string,
+  modal: PropTypes.bool
 };
 
 export default Search;
