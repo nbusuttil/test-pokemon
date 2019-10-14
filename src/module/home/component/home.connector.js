@@ -10,10 +10,10 @@ import { openModal } from '../../modal/modal.actions';
 
 const mapStateToProps = state => ({
   pokemons: state.pokemons.list,
-  lastOffset: state.pokemons.lastOffset,
   filteredValue: state.pokemons.filteredValue,
   filteredBy: state.pokemons.filteredBy,
-  modal: state.modal.isOpened
+  modal: state.modal.isOpened,
+  nextUrl: state.pokemons.nextUrl
 });
 
 const mapDispatchToProps = dispatch => ({

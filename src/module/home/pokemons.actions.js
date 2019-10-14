@@ -7,22 +7,21 @@ export const loadPokemons = () => dispatch =>
     .then(pokemons =>
       dispatch({
         type: LOAD_POKEMONS,
-        pokemons: pokemons.results
+        pokemons: pokemons.results,
+        nextUrl: pokemons.next
       })
     )
     .catch(() => new Error('The list of pokemon is not retrieved'));
 
 export const LOAD_POKEMONS_WITH_PAGINATION = 'LOAD_POKEMONS_WITH_PAGINATION';
-export const loadPokemonsWithPagination = lastOffset => dispatch => {
-  const currentOffset = lastOffset + LIMIT;
-
-  return fetch(`${BASE_URL}?offset=${currentOffset}&limit=${LIMIT}`)
+export const loadPokemonsWithPagination = nextUrl => dispatch => {
+  return fetch(`${nextUrl}`)
     .then(response => reponseHandler(response))
     .then(pokemons =>
       dispatch({
         type: LOAD_POKEMONS_WITH_PAGINATION,
         pokemons: pokemons.results,
-        currentOffset: currentOffset
+        nextUrl: pokemons.next
       })
     )
     .catch(() => new Error('The list of pokemon is not retrieved'));

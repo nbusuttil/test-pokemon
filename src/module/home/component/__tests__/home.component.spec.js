@@ -29,7 +29,8 @@ describe('Home component', () => {
         }
       ],
       filteredBy: '',
-      modal: false
+      modal: false,
+      nextUrl: ''
     };
   });
   const getWrapper = () => shallow(<Home {...props} />);

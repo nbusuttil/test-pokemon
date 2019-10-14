@@ -13,8 +13,8 @@ class Home extends Component {
   }
 
   paginationOfPokemon = () => {
-    const { loadPokemonsWithPagination, lastOffset } = this.props;
-    loadPokemonsWithPagination(lastOffset);
+    const { loadPokemonsWithPagination, nextUrl } = this.props;
+    loadPokemonsWithPagination(nextUrl);
   };
 
   handleChange = event => this.props.filteredPokemon(event.target.value);
@@ -71,6 +71,7 @@ Home.propTypes = {
   loadPokemonsWithPagination: PropTypes.func.isRequired,
   addItem: PropTypes.func.isRequired,
   pokemons: PropTypes.array.isRequired,
+  nextUrl: PropTypes.string.isRequired,
   filteredBy: PropTypes.string,
   modal: PropTypes.bool
 };
