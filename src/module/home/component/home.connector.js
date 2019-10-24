@@ -18,8 +18,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   loadPokemons: () => dispatch(loadPokemons()),
-  loadPokemonsWithPagination: (pagination, lastOffset) =>
-    dispatch(loadPokemonsWithPagination(pagination, lastOffset)),
+  loadPokemonsWithPagination: nextUrl =>
+    dispatch(loadPokemonsWithPagination(nextUrl)),
   addItem: (pokemon, quantity) => dispatch(addItem(pokemon, quantity)),
   filteredPokemon: value => dispatch(filteredPokemon(value)),
   openModal: id => dispatch(openModal(id))
